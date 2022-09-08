@@ -1,16 +1,21 @@
 header{ 
     text-align: center; 
-    visibility: visible;
+    
 } 
 
 section { 
     margin-top: 50px; 
     text-align: center; 
-    visibility: visible;
+   
 
 } 
 
-.Rap-Link { 
-    background: none; 
-    border: none;
+.Home-screen { 
+    display: visible;
+} 
+
+h3 { 
+border-bottom: 3px solid lightgrey; 
+width: 700px; 
+
 }
