@@ -19,4 +19,10 @@ border-bottom: 3px solid lightgrey;
 width: 700px;  
 
 
+} 
+
+.Counter-Display { 
+    display: none; 
+    position: absolute;
+    text-align: center;
 }
