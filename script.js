@@ -35,7 +35,9 @@ const counterEl = document.querySelector('#Score-Counter')
 
 const counterDisplay = document.querySelector('.Counter-Display') 
 
-const hereButtonEl = document.querySelector('.here-button');
+const hereButton1El = document.querySelector('.here-button1');
+
+const hereButton2El = document.querySelector('.here-button2');
 
 let scoreCounter = 0 
 
@@ -63,7 +65,15 @@ rapButtonEl.addEventListener('click', function () {
     
 }); 
 
-hereButtonEl.addEventListener('click', function () { 
+hereButton1El.addEventListener('click', function () { 
+    
+    homeScreenEl.style.display = 'none'; 
+    gameSubjectsEl.style.display = 'inline'; 
+    
+    
+}); 
+
+hereButton2El.addEventListener('click', function () { 
     
     homeScreenEl.style.display = 'none'; 
     gameSubjectsEl.style.display = 'inline'; 

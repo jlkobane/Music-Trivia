@@ -9,18 +9,19 @@ header{
 
 h1 { 
     font-size: 40px; 
-    padding-bottom: 15px;
+    padding-bottom: 15px; 
+    padding-top: 10px;
 
 } 
 
-.here-button {
+.here-button1, .here-button2 {
     padding: 0;
     border: none;
     background: none; 
     cursor: pointer;
     font-size: 22px; 
     margin-right: 0px; 
-    color: purple;
+    color: #bd52f7;
 }
 
 button { 
