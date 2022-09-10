@@ -3,6 +3,7 @@
 	<head>
 		<link rel="stylesheet" href="reset.css" />
 		<link rel="stylesheet" href="style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,9 +13,11 @@
 	<body>
 		<div class="Home-screen">
 			<header>
-				<h1>Musical Trivia</h1>
+				<h1>Music Trivia</h1>
 				<nav>
 					<button class="Rap-Link">Rap</button>
+					<button class="Rock-Link">Rock</button>
+					<button class="Pop-Link">Pop</button>
 				</nav>
 			</header>
 			<section>
@@ -24,32 +27,133 @@
 					or against your friends. Remember there is only one rule on this site
 					and that is to have fun!
 				</p>
-				<img src="" alt="" />
+				<img class="Rapper" src="rap.jpg" alt="Rapper Performing" />
+				<p>
+					Love Hip-Hop? Want to see how much you know about the worlds top
+					genre? Click <button class="here-button">here</button> to view some of
+					our rap trivia games.
+				</p>
+				<img class="Rockstar" src="rock.jpg" alt="Rockstar Playing Guitar" />
 			</section>
-		</div> 
+		</div>
 		<div class="Counter-Display">
-		<h2 id="Score-Counter">0</h2> 
-		<button>Try Again</button> 
-		<button>View Your Answers</button>
-			</div>
+			<h2 id="Score-Counter">0</h2>
+			<button>Try Again</button>
+			<button>View Your Answers</button>
+		</div>
 		<div class="Game-subjects-rap">
 			<section>
-				<h1>All Rap Trivia</h1> 
+				<h1>All Rap Trivia</h1>
 				<img src="" alt="" />
 				<button class="Game-selectors">A fun game about emo rap.</button>
 			</section>
 		</div>
 		<div class="Emo-Rap-Questions">
 			<section>
-				<h1>Emo Rap Trivia</h1> 
+				<h1>Emo Rap Trivia</h1>
 				<h3>
-					Question 1: <br/>
-					When did Juice Wrld die?
+					Question 1: <br />
+					When did Juice Wrld die? <br />
+					<input
+						id="User-Answer1"
+						type="text"
+						name="number"
+						placeholder="Enter Answer"
+					/>
 				</h3>
-				<input id="User-Answer" type="text" name="number" placeholder ="Enter Answer"/> 
+
+				<h3>
+					Question 2: <br />
+					When did emo rap start? <br />
+					<input
+						id="User-Answer2"
+						type="text"
+						name="number"
+						placeholder="Enter Answer"
+					/>
+				</h3>
+				<h3>
+					Question 3: <br />
+					Who is reguarded as the "father" of emo rap? <br />
+					<input
+						id="User-Answer3"
+						type="text"
+						name="number"
+						placeholder="Enter Answer"
+					/>
+				</h3>
+				<h3>
+					Question 4: <br />
+					When did Lil Peep start his career? <br />
+					<input
+						id="User-Answer4"
+						type="text"
+						name="number"
+						placeholder="Enter Answer"
+					/>
+				</h3>
+				<h3>
+					Question 5: <br />
+					What was xxxtentacions full name? <br />
+					<input
+						id="User-Answer5"
+						type="text"
+						name="number"
+						placeholder="Enter Answer"
+					/>
+				</h3>
+				<h3>
+					Question 6: <br />
+					How tall is Lil Uzi Vert? <br />
+					<input
+						id="User-Answer6"
+						type="text"
+						name="number"
+						placeholder="Enter Answer"
+					/>
+				</h3>
+				<h3>
+					Question 7: <br />
+					How many times did Post Malone sell out Madison Square Garden? <br />
+					<input
+						id="User-Answer7"
+						type="text"
+						name="number"
+						placeholder="Enter Answer"
+					/>
+				</h3>
+				<h3>
+					Question 8: <br />
+					What was Juice Wrlds biggest song? <br />
+					<input
+						id="User-Answer8"
+						type="text"
+						name="number"
+						placeholder="Enter Answer"
+					/>
+				</h3>
+				<h3>
+					Question 9: <br />
+					When did xxxtentacions ? album release? <br />
+					<input
+						id="User-Answer9"
+						type="text"
+						name="number"
+						placeholder="Enter Answer"
+					/>
+				</h3>
+				<h3>
+					Question 10: <br />
+					What is Trippie Redd's real name? <br />
+					<input
+						id="User-Answer10"
+						type="text"
+						name="number"
+						placeholder="Enter Answer"
+					/>
+				</h3>
 				<button id="Score-Result" onclick="userInput()">Get Results!</button>
 			</section>
-		</div> 
-		
+		</div>
 	</body>
 </html>
