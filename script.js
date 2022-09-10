@@ -39,6 +39,8 @@ const hereButton1El = document.querySelector('.here-button1');
 
 const hereButton2El = document.querySelector('.here-button2');
 
+const hereButton3El = document.querySelector('.here-button2'); 
+
 let scoreCounter = 0 
 
 let emoRapAnswers = [
@@ -74,6 +76,14 @@ hereButton1El.addEventListener('click', function () {
 }); 
 
 hereButton2El.addEventListener('click', function () { 
+    
+    homeScreenEl.style.display = 'none'; 
+    gameSubjectsEl.style.display = 'inline'; 
+    
+    
+}); 
+
+hereButton3El.addEventListener('click', function () { 
     
     homeScreenEl.style.display = 'none'; 
     gameSubjectsEl.style.display = 'inline'; 
