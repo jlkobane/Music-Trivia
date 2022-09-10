@@ -97,12 +97,33 @@ button:hover {
 
 .juice { 
     margin: 30px 0px 20px;
-        height: 200px;
-        width: 250px;
+        height: 200px;  
+      display: inline-block;
 }
 
 .Game-selectors { 
-    display: inline;
+    display: inline-block; 
+    vertical-align: middle;  
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 22px;
+    margin-right: 0px;
+    color: #bd52f7;
+} 
+
+.Selector-Title { 
+    text-align: center;
+    background-color: #501b1d;
+    color: #ADADAD;
+    padding-bottom: 8px;
+    font-family: 'Barlow', sans-serif;
+    letter-spacing: 2px; 
+    font-size: 40px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+
 }
 
 h3 { 
