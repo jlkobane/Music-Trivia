@@ -56,7 +56,11 @@ let emoRapAnswers = [
 	'Lucid Dreams',
 	'March 16th 2018',
 	'Michael Lamar White',
-];
+]; 
+
+let userAnswers = []
+
+
 
 gameSubjectsEl.style.display = 'none';
 questionsEl.style.display = 'none';
@@ -112,52 +116,72 @@ rapRestartEl.addEventListener('click', function () {
 
 
 function userInput() { 
-    if (answerInput1El.value == emoRapAnswers[0]) { 
-        scoreCounter += 1
-        
-    }
-    if (answerInput2El.value == emoRapAnswers[1]) { 
-        scoreCounter += 1
-        
-    }
-    if (answerInput3El.value == emoRapAnswers[2]) { 
-        scoreCounter += 1
-        
-    }
-    if (answerInput4El.value == emoRapAnswers[3]) { 
-        scoreCounter += 1
-        
-    }
-    if (answerInput5El.value == emoRapAnswers[4]) { 
-        scoreCounter += 1
-        
-    }
-    if (answerInput6El.value == emoRapAnswers[5]) { 
-        scoreCounter += 1
-        
-    }
-    if (answerInput7El.value == emoRapAnswers[6]) { 
-        scoreCounter += 1
-        
-    }
-    if (answerInput8El.value == emoRapAnswers[7]) { 
-        scoreCounter += 1
-        
-    }
-    if (answerInput9El.value == emoRapAnswers[8]) { 
-        scoreCounter += 1
-        
-    }
-    if (answerInput10El.value == emoRapAnswers[9]) { 
-        scoreCounter += 1
-        
-    }
+    userAnswers.push(answerInput1El.value)
+    userAnswers.push(answerInput2El.value)
+    userAnswers.push(answerInput3El.value)
+    userAnswers.push(answerInput4El.value)
+    userAnswers.push(answerInput5El.value)
+    userAnswers.push(answerInput6El.value)
+    userAnswers.push(answerInput7El.value)
+    userAnswers.push(answerInput8El.value)
+    userAnswers.push(answerInput9El.value)
+    userAnswers.push(answerInput10El.value) 
+    console.log(userAnswers)
     
+    // if (answerInput2El.value == emoRapAnswers[1]) { 
+    //     scoreCounter += 1
+        
+    // }
+    // if (answerInput3El.value == emoRapAnswers[2]) { 
+    //     scoreCounter += 1
+        
+    // }
+    // if (answerInput4El.value == emoRapAnswers[3]) { 
+    //     scoreCounter += 1
+        
+    // }
+    // if (answerInput5El.value == emoRapAnswers[4]) { 
+    //     scoreCounter += 1
+        
+    // }
+    // if (answerInput6El.value == emoRapAnswers[5]) { 
+    //     scoreCounter += 1
+        
+    // }
+    // if (answerInput7El.value == emoRapAnswers[6]) { 
+    //     scoreCounter += 1
+        
+    // }
+    // if (answerInput8El.value == emoRapAnswers[7]) { 
+    //     scoreCounter += 1
+        
+    // }
+    // if (answerInput9El.value == emoRapAnswers[8]) { 
+    //     scoreCounter += 1
+        
+    // }
+    // if (answerInput10El.value == emoRapAnswers[9]) { 
+    //     scoreCounter += 1
+        
+    // }
+    
+} 
+function compareAnswer() { 
+for (let i = 0; i < userAnswers.length; i++) { 
+    console.log(emoRapAnswers[i])
+    console.log(userAnswers[i])
+    if (emoRapAnswers[i] == userAnswers[i]){ 
+        scoreCounter += 1
+    }
+} 
+
 }
+
+
 
 getResultsEl.addEventListener('click', function () { 
     
-    
+    compareAnswer();
     questionsEl.style.display = 'none'; 
     counterEl.style.display = 'inline';
     counterDisplay.style.display = 'inline'
