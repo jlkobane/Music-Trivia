@@ -1,10 +1,16 @@
 html { 
-    background-color: #ededed;
+    background-color: #ADADAD;
+}  
+
+body { 
+    text-align: center;
 }
+
 
 header{ 
     text-align: center; 
     background-color: #501b1d; 
+    border-radius: 70px;
     color: #ADADAD; 
     padding-bottom: 8px; 
     font-family: 'Barlow', sans-serif; 
@@ -96,9 +102,18 @@ button:hover {
 } 
 
 .juice { 
+    
     margin: 30px 0px 20px;
         height: 200px;  
       display: inline-block;
+}
+
+.Picture-Styling { 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    
+    
 }
 
 .Game-selectors { 
@@ -113,9 +128,10 @@ button:hover {
     color: #bd52f7;
 } 
 
-.Selector-Title { 
+.Selector-Title-Rap { 
     text-align: center;
-    background-color: #501b1d;
+    background-color: #501b1d; 
+    border-radius: 70px;
     color: #ADADAD;
     padding-bottom: 8px;
     font-family: 'Barlow', sans-serif;
@@ -127,14 +143,123 @@ button:hover {
 }
 
 h3 { 
-border-bottom: 3px solid lightgrey; 
-width: 700px;  
+border-bottom: 3px solid black; 
+padding-top: 12px;
+width: 100%;
 
+}  
 
+.Emo-Rap-Questions { 
+    text-align: center; 
+    line-height: 30px; 
+    font-size: 22px; 
+    font-family: 'Barlow', sans-serif;
+    
+}
+
+.emo-rap { 
+    font-size: 40px;
+    padding-bottom: 20px;
+    padding-top: 12px; 
+    text-align: center;
+    background-color: #501b1d; 
+    border-radius: 70px;
+    color: #ADADAD;
+    padding-bottom: 12px;
+    font-family: 'Barlow', sans-serif;
+    letter-spacing: 2px; 
+    width: 100%;
 } 
 
+input { 
+    margin-bottom: 12px; 
+    height: 15px; 
+    width: 200px;
+}
+
+
 .Counter-Display { 
-    display: none; 
-    position: absolute;
+     display: none;
+    text-align: center; 
+    color: black; 
+    font-size: 50px;
+}   
+
+#try-again-rap { 
+    background-color: white;
+    border: none;
+    color: black;
     text-align: center;
+    padding: 4px;
+    width: 100px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    border-radius: 12px;
+    margin: 15px 0px;
+} 
+
+#rap-answers { 
+    background-color: white;
+    border: none;
+    color: black;
+    text-align: center;
+    padding: 4px;
+    width: 180px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    cursor: pointer;
+    display: inline;
+    position: relative;
+    transition: 0.5s;
+    border-radius: 12px;
+    margin: 15px 0px;
+}
+
+#home-menu { 
+    background-color: white;
+        border: none;
+        color: black;
+        text-align: center;
+        padding: 4px;
+        width: 125px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+        cursor: pointer;
+        display: inline;
+        position: relative;
+        transition: 0.5s;
+        border-radius: 12px;
+        margin: 15px 0px;
+}
+
+
+#Score-Result { 
+display: inline-block;
+    background-color: white;
+    border: none;
+    color: black;
+    text-align: center;
+    font-size: 22px;
+    padding: 9px;
+    width: 165px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px; 
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s; 
+    border-radius: 12px; 
+    margin: 15px 0px;
+} 
+
+.Selector-Title-Rock { 
+display: none;
 }

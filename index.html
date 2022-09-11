@@ -46,19 +46,22 @@
 		</div>
 		<div class="Counter-Display">
 			<h2 id="Score-Counter">0</h2>
-			<button>Try Again</button>
-			<button>View Your Answers</button>
+			<button id="try-again-rap">Try Again</button>
+			<button id="rap-answers">View Your Answers</button> 
+			<button id="home-menu">Return Home</button>
 		</div>
 		<div class="Game-subjects-rap">
 			<section>
-				<h1 class="Selector-Title">All Rap Trivia</h1>
-				<img class="juice" src="juice.jpg" alt="Juice Wrld Performing" />
-				A <button class="Game-selectors">quiz</button> about some of the tops rappers in the game right now.</section>
-			</section>
-		</div>
+				<h1 class="Selector-Title-Rap">All Rap Trivia</h1> 
+				<div class="Picture-Styling">
+					<img class="juice" src="juice.jpg" alt="Juice Wrld Performing" />
+					<p>A <button class="Game-selectors">quiz</button> about some of the top rappers in the game right now.</p>  
+				</div>
+				</section> 
+			</div>
 		<div class="Emo-Rap-Questions">
-			<section>
-				<h1>Emo Rap Trivia</h1>
+			<section> 
+				<h1 class="emo-rap">Emo Rap</h1>
 				<h3>
 					Question 1: <br />
 					When did Juice Wrld die? <br />
@@ -160,7 +163,7 @@
 						placeholder="Enter Answer"
 					/>
 				</h3>
-				<button id="Score-Result" onclick="userInput()">Get Results!</button>
+				<button id="Score-Result" style="vertical-align:middle" onclick="userInput()"><span>Get Results!</span></button>
 			</section>
 		</div>
 	</body>

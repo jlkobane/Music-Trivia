@@ -41,6 +41,8 @@ const hereButton2El = document.querySelector('.here-button2');
 
 const hereButton3El = document.querySelector('.here-button2'); 
 
+const rapRestartEl = document.querySelector('#try-again-rap')
+
 let scoreCounter = 0 
 
 let emoRapAnswers = [
@@ -101,6 +103,14 @@ gameSelectorbuttonEl.addEventListener('click', function () {
 
 
 
+rapRestartEl.addEventListener('click', function () { 
+    questionsEl.style.display = 'inline' 
+    counterDisplay.style.display = 'none'  
+    
+   
+});
+
+
 function userInput() { 
     if (answerInput1El.value == emoRapAnswers[0]) { 
         scoreCounter += 1
@@ -152,7 +162,7 @@ getResultsEl.addEventListener('click', function () {
     counterEl.style.display = 'inline';
     counterDisplay.style.display = 'inline'
     let percentage = scoreCounter * 10 
-    counterEl.innerHTML = `${scoreCounter}/10 ${percentage}%` 
+    counterEl.innerHTML = `You got ${percentage}%. Would you like to` 
     console.log(scoreCounter)
 
 }); 
