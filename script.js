@@ -12,7 +12,9 @@ const gameSubjectsEl = document.querySelector('.Game-subjects-rap')
 
 const gameRockSubjectsEl = document.querySelector('.Game-subjects-rock')  
 
-const questionsEl = document.querySelector('.Emo-Rap-Questions');  
+const questionsEl = document.querySelector('.Emo-Rap-Questions'); 
+
+const rockQuestionsEl = document.querySelector('.Rock-Questions');
 
 const answerInput1El = document.querySelector('#User-Answer1');   
 
@@ -33,9 +35,32 @@ querySelector('#User-Answer8');
 
 const answerInput9El = document.querySelector('#User-Answer9');   
 
-const answerInput10El = document.querySelector('#User-Answer10');   
+const answerInput10El = document.querySelector('#User-Answer10');  
+
+const answerInput11El = document.querySelector('#User-Answer11');   
+
+const answerInput12El = document.querySelector('#User-Answer12');   
+
+const answerInput13El = document.querySelector('#User-Answer13');   
+
+const answerInput14El = document.querySelector('#User-Answer14');   
+
+const answerInput15El = document.querySelector('#User-Answer15');   
+
+const answerInput16El = document.querySelector('#User-Answer16');   
+
+const answerInput17El = document.querySelector('#User-Answer17');   
+
+const answerInput18El = document.
+querySelector('#User-Answer18');   
+
+const answerInput19El = document.querySelector('#User-Answer19');   
+
+const answerInput20El = document.querySelector('#User-Answer20');   
 
 const getResultsEl = document.querySelector('#Score-Result')
+
+const getRockResultsEl = document.querySelector('#Score-Result-Rock')
 
 const counterEl = document.querySelector('#Score-Counter') 
 
@@ -64,13 +89,29 @@ let emoRapAnswers = [
 	'Michael Lamar White',
 ]; 
 
-let userAnswers = []
+let rockAnswers = [
+	'Motley Crue',
+	'Ozzy Osbourne',
+	'Guns n Roses',
+	'1982',
+	'Rick Allen',
+	'Toxic Twins',
+	'Freddie Mercury',
+	'AC/DC',
+	'Metallica',
+	'Bruce Dickinson',
+]; 
+
+let userAnswers = [] 
+
+let userRockAnswers = []
 
 
 
 gameSubjectsEl.style.display = 'none'; 
 gameRockSubjectsEl.style.display ='none';
 questionsEl.style.display = 'none';
+rockQuestionsEl.style.display = 'none';
 
 rapButtonEl.addEventListener('click', function () { 
     
@@ -122,7 +163,7 @@ gameSelectorbuttonEl.addEventListener('click', function () {
 gameRockSelectorbuttonEl.addEventListener('click', function () { 
     
     gameRockSubjectsEl.style.display = 'none'; 
-    questionsEl.style.display = 'inline'
+    rockQuestionsEl.style.display = 'inline'
     
     
 }); 
@@ -148,51 +189,31 @@ function userInput() {
 	userAnswers.push(answerInput8El.value);
 	userAnswers.push(answerInput9El.value);
 	userAnswers.push(answerInput10El.value);
-	console.log(userAnswers);
-
-	// if (answerInput2El.value == emoRapAnswers[1]) {
-	//     scoreCounter += 1
-
-	// }
-	// if (answerInput3El.value == emoRapAnswers[2]) {
-	//     scoreCounter += 1
-
-	// }
-	// if (answerInput4El.value == emoRapAnswers[3]) {
-	//     scoreCounter += 1
-
-	// }
-	// if (answerInput5El.value == emoRapAnswers[4]) {
-	//     scoreCounter += 1
-
-	// }
-	// if (answerInput6El.value == emoRapAnswers[5]) {
-	//     scoreCounter += 1
-
-	// }
-	// if (answerInput7El.value == emoRapAnswers[6]) {
-	//     scoreCounter += 1
-
-	// }
-	// if (answerInput8El.value == emoRapAnswers[7]) {
-	//     scoreCounter += 1
-
-	// }
-	// if (answerInput9El.value == emoRapAnswers[8]) {
-	//     scoreCounter += 1
-
-	// }
-	// if (answerInput10El.value == emoRapAnswers[9]) {
-	//     scoreCounter += 1
-
-	// }
+	userRockAnswers.push(answerInput11El.value);
+	userRockAnswers.push(answerInput12El.value);
+	userRockAnswers.push(answerInput13El.value);
+	userRockAnswers.push(answerInput14El.value);
+	userRockAnswers.push(answerInput15El.value);
+	userRockAnswers.push(answerInput16El.value);
+	userRockAnswers.push(answerInput17El.value);
+	userRockAnswers.push(answerInput18El.value);
+	userRockAnswers.push(answerInput19El.value);
+	userRockAnswers.push(answerInput20El.value);
 } 
 
 function compareAnswer() { 
 for (let i = 0; i < userAnswers.length; i++) { 
-    console.log(emoRapAnswers[i])
-    console.log(userAnswers[i])
     if (emoRapAnswers[i] == userAnswers[i]){ 
+        scoreCounter += 1
+    }
+} 
+
+} 
+
+function compareRockAnswer() { 
+for (let i = 0; i < userRockAnswers.length; i++) {  
+    
+    if (rockAnswers[i] == userRockAnswers[i]){ 
         scoreCounter += 1
     }
 } 
@@ -205,6 +226,17 @@ getResultsEl.addEventListener('click', function () {
     
     compareAnswer();
     questionsEl.style.display = 'none'; 
+    counterEl.style.display = 'inline';
+    counterDisplay.style.display = 'inline'
+    let percentage = scoreCounter * 10 
+    counterEl.innerHTML = `You got ${percentage}%. Would you like to` 
+
+}); 
+
+getRockResultsEl.addEventListener('click', function () { 
+    
+    compareRockAnswer();
+    rockQuestionsEl.style.display = 'none'; 
     counterEl.style.display = 'inline';
     counterDisplay.style.display = 'inline'
     let percentage = scoreCounter * 10 
