@@ -1,20 +1,30 @@
 const homeScreenEl = document.querySelector('.Home-screen')
 
+const returnHomeButtonEl = document.querySelector('#home-menu')
+
 const rapButtonEl = document.querySelector('.Rap-Link') 
 
 const rockButtonEl = document.querySelector('.Rock-Link') 
+
+const popButtonEl = document.querySelector('.Pop-Link') 
 
 const gameSelectorbuttonEl = document.querySelector('.Game-selectors') 
 
 const gameRockSelectorbuttonEl = document.querySelector('.Game-selectors-rock'); 
 
+const gamePopSelectorbuttonEl = document.querySelector('.Game-selectors-pop'); 
+
 const gameSubjectsEl = document.querySelector('.Game-subjects-rap')  
 
 const gameRockSubjectsEl = document.querySelector('.Game-subjects-rock')  
 
+const gamePopSubjectsEl = document.querySelector('.Game-subjects-pop')  
+
 const questionsEl = document.querySelector('.Emo-Rap-Questions'); 
 
 const rockQuestionsEl = document.querySelector('.Rock-Questions');
+
+const popQuestionsEl = document.querySelector('.Pop-Questions');
 
 const answerInput1El = document.querySelector('#User-Answer1');   
 
@@ -56,11 +66,34 @@ querySelector('#User-Answer18');
 
 const answerInput19El = document.querySelector('#User-Answer19');   
 
-const answerInput20El = document.querySelector('#User-Answer20');   
+const answerInput20El = document.querySelector('#User-Answer20'); 
+
+const answerInput21El = document.querySelector('#User-Answer21');   
+
+const answerInput22El = document.querySelector('#User-Answer22');   
+
+const answerInput23El = document.querySelector('#User-Answer23');   
+
+const answerInput24El = document.querySelector('#User-Answer24');   
+
+const answerInput25El = document.querySelector('#User-Answer25');   
+
+const answerInput26El = document.querySelector('#User-Answer26');   
+
+const answerInput27El = document.querySelector('#User-Answer27');   
+
+const answerInput28El = document.
+querySelector('#User-Answer28');   
+
+const answerInput29El = document.querySelector('#User-Answer29');   
+
+const answerInput30El = document.querySelector('#User-Answer30');   
 
 const getResultsEl = document.querySelector('#Score-Result')
 
 const getRockResultsEl = document.querySelector('#Score-Result-Rock')
+
+const getPopResultsEl = document.querySelector('#Score-Result-Pop')
 
 const counterEl = document.querySelector('#Score-Counter') 
 
@@ -102,16 +135,33 @@ let rockAnswers = [
 	'Bruce Dickinson',
 ]; 
 
+let popAnswers = [
+	'The Whiz',
+	'The Jackson 5',
+	'197',
+	'Elvis Presley',
+	'Thriller',
+	'Scream',
+	'7 Weeks',
+	'9',
+	'Anti Gravity Lean',
+	'12',
+]; 
+
 let userAnswers = [] 
 
-let userRockAnswers = []
+let userRockAnswers = [] 
+
+let userPopAnswers = []
 
 
 
 gameSubjectsEl.style.display = 'none'; 
 gameRockSubjectsEl.style.display ='none';
+gamePopSubjectsEl.style.display ='none';
 questionsEl.style.display = 'none';
 rockQuestionsEl.style.display = 'none';
+popQuestionsEl.style.display = 'none';
 
 rapButtonEl.addEventListener('click', function () { 
     
@@ -124,6 +174,13 @@ rockButtonEl.addEventListener('click', function () {
     
     homeScreenEl.style.display = 'none'; 
     gameRockSubjectsEl.style.display = 'inline'; 
+    
+    
+}); 
+popButtonEl.addEventListener('click', function () { 
+    
+    homeScreenEl.style.display = 'none'; 
+    gamePopSubjectsEl.style.display = 'inline'; 
     
     
 }); 
@@ -167,6 +224,13 @@ gameRockSelectorbuttonEl.addEventListener('click', function () {
     
     
 }); 
+gamePopSelectorbuttonEl.addEventListener('click', function () { 
+    
+    gamePopSubjectsEl.style.display = 'none'; 
+    popQuestionsEl.style.display = 'inline'
+    
+    
+}); 
 
 
 
@@ -199,6 +263,16 @@ function userInput() {
 	userRockAnswers.push(answerInput18El.value);
 	userRockAnswers.push(answerInput19El.value);
 	userRockAnswers.push(answerInput20El.value);
+	userPopAnswers.push(answerInput21El.value);
+	userPopAnswers.push(answerInput22El.value);
+	userPopAnswers.push(answerInput23El.value);
+	userPopAnswers.push(answerInput24El.value);
+	userPopAnswers.push(answerInput25El.value);
+	userPopAnswers.push(answerInput26El.value);
+	userPopAnswers.push(answerInput27El.value);
+	userPopAnswers.push(answerInput28El.value);
+	userPopAnswers.push(answerInput29El.value);
+	userPopAnswers.push(answerInput30El.value);
 } 
 
 function compareAnswer() { 
@@ -214,6 +288,16 @@ function compareRockAnswer() {
 for (let i = 0; i < userRockAnswers.length; i++) {  
     
     if (rockAnswers[i] == userRockAnswers[i]){ 
+        scoreCounter += 1
+    }
+} 
+
+}
+
+function comparePopAnswer() { 
+for (let i = 0; i < userPopAnswers.length; i++) {  
+    
+    if (popAnswers[i] == userPopAnswers[i]){ 
         scoreCounter += 1
     }
 } 
@@ -241,6 +325,16 @@ getRockResultsEl.addEventListener('click', function () {
     counterDisplay.style.display = 'inline'
     let percentage = scoreCounter * 10 
     counterEl.innerHTML = `You got ${percentage}%. Would you like to` 
-    console.log(scoreCounter)
+
+}); 
+
+getPopResultsEl.addEventListener('click', function () { 
+    
+    comparePopAnswer();
+	popQuestionsEl.style.display = 'none'; 
+    counterEl.style.display = 'inline';
+    counterDisplay.style.display = 'inline'
+    let percentage = scoreCounter * 10 
+    counterEl.innerHTML = `You got ${percentage}%. Would you like to` 
 
 }); 
