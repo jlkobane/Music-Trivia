@@ -2,9 +2,15 @@ const homeScreenEl = document.querySelector('.Home-screen')
 
 const rapButtonEl = document.querySelector('.Rap-Link') 
 
+const rockButtonEl = document.querySelector('.Rock-Link') 
+
 const gameSelectorbuttonEl = document.querySelector('.Game-selectors') 
 
+const gameRockSelectorbuttonEl = document.querySelector('.Game-selectors-rock'); 
+
 const gameSubjectsEl = document.querySelector('.Game-subjects-rap')  
+
+const gameRockSubjectsEl = document.querySelector('.Game-subjects-rock')  
 
 const questionsEl = document.querySelector('.Emo-Rap-Questions');  
 
@@ -62,13 +68,21 @@ let userAnswers = []
 
 
 
-gameSubjectsEl.style.display = 'none';
+gameSubjectsEl.style.display = 'none'; 
+gameRockSubjectsEl.style.display ='none';
 questionsEl.style.display = 'none';
 
 rapButtonEl.addEventListener('click', function () { 
     
     homeScreenEl.style.display = 'none'; 
     gameSubjectsEl.style.display = 'inline'; 
+    
+    
+}); 
+rockButtonEl.addEventListener('click', function () { 
+    
+    homeScreenEl.style.display = 'none'; 
+    gameRockSubjectsEl.style.display = 'inline'; 
     
     
 }); 
@@ -105,6 +119,14 @@ gameSelectorbuttonEl.addEventListener('click', function () {
     
 }); 
 
+gameRockSelectorbuttonEl.addEventListener('click', function () { 
+    
+    gameRockSubjectsEl.style.display = 'none'; 
+    questionsEl.style.display = 'inline'
+    
+    
+}); 
+
 
 
 rapRestartEl.addEventListener('click', function () { 
@@ -115,57 +137,57 @@ rapRestartEl.addEventListener('click', function () {
 });
 
 
-function userInput() { 
-    userAnswers.push(answerInput1El.value)
-    userAnswers.push(answerInput2El.value)
-    userAnswers.push(answerInput3El.value)
-    userAnswers.push(answerInput4El.value)
-    userAnswers.push(answerInput5El.value)
-    userAnswers.push(answerInput6El.value)
-    userAnswers.push(answerInput7El.value)
-    userAnswers.push(answerInput8El.value)
-    userAnswers.push(answerInput9El.value)
-    userAnswers.push(answerInput10El.value) 
-    console.log(userAnswers)
-    
-    // if (answerInput2El.value == emoRapAnswers[1]) { 
-    //     scoreCounter += 1
-        
-    // }
-    // if (answerInput3El.value == emoRapAnswers[2]) { 
-    //     scoreCounter += 1
-        
-    // }
-    // if (answerInput4El.value == emoRapAnswers[3]) { 
-    //     scoreCounter += 1
-        
-    // }
-    // if (answerInput5El.value == emoRapAnswers[4]) { 
-    //     scoreCounter += 1
-        
-    // }
-    // if (answerInput6El.value == emoRapAnswers[5]) { 
-    //     scoreCounter += 1
-        
-    // }
-    // if (answerInput7El.value == emoRapAnswers[6]) { 
-    //     scoreCounter += 1
-        
-    // }
-    // if (answerInput8El.value == emoRapAnswers[7]) { 
-    //     scoreCounter += 1
-        
-    // }
-    // if (answerInput9El.value == emoRapAnswers[8]) { 
-    //     scoreCounter += 1
-        
-    // }
-    // if (answerInput10El.value == emoRapAnswers[9]) { 
-    //     scoreCounter += 1
-        
-    // }
-    
+function userInput() {
+	userAnswers.push(answerInput1El.value);
+	userAnswers.push(answerInput2El.value);
+	userAnswers.push(answerInput3El.value);
+	userAnswers.push(answerInput4El.value);
+	userAnswers.push(answerInput5El.value);
+	userAnswers.push(answerInput6El.value);
+	userAnswers.push(answerInput7El.value);
+	userAnswers.push(answerInput8El.value);
+	userAnswers.push(answerInput9El.value);
+	userAnswers.push(answerInput10El.value);
+	console.log(userAnswers);
+
+	// if (answerInput2El.value == emoRapAnswers[1]) {
+	//     scoreCounter += 1
+
+	// }
+	// if (answerInput3El.value == emoRapAnswers[2]) {
+	//     scoreCounter += 1
+
+	// }
+	// if (answerInput4El.value == emoRapAnswers[3]) {
+	//     scoreCounter += 1
+
+	// }
+	// if (answerInput5El.value == emoRapAnswers[4]) {
+	//     scoreCounter += 1
+
+	// }
+	// if (answerInput6El.value == emoRapAnswers[5]) {
+	//     scoreCounter += 1
+
+	// }
+	// if (answerInput7El.value == emoRapAnswers[6]) {
+	//     scoreCounter += 1
+
+	// }
+	// if (answerInput8El.value == emoRapAnswers[7]) {
+	//     scoreCounter += 1
+
+	// }
+	// if (answerInput9El.value == emoRapAnswers[8]) {
+	//     scoreCounter += 1
+
+	// }
+	// if (answerInput10El.value == emoRapAnswers[9]) {
+	//     scoreCounter += 1
+
+	// }
 } 
+
 function compareAnswer() { 
 for (let i = 0; i < userAnswers.length; i++) { 
     console.log(emoRapAnswers[i])
