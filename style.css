@@ -1,13 +1,14 @@
-html { 
-    background-color: #ADADAD;
+html, body { 
+    
+    background-color: #ADADAD; 
+    margin: 0px; 
+    padding: 0px;
+    text-align: center;
 }  
 
-body { 
-    text-align: center;
-}
-
-
-header{ 
+.header{ 
+    margin-top: 0px; 
+    z-index: 5;
     text-align: center; 
     background-color: #501b1d; 
     border-top: solid black 5px;
@@ -71,7 +72,8 @@ button:hover {
     line-height: 35px; 
     background-color: #83677b; 
     border: solid black 3px; 
-    border-radius: 15px;
+    border-radius: 15px; 
+    
     
 
 } 
@@ -171,7 +173,8 @@ button:hover {
 
 .Game-selector-styling { 
     padding-left: 15px; 
-    width: 300px;
+    width: 300px; 
+    word-spacing: 2px;
 }
 
 
@@ -339,22 +342,32 @@ input {
     border: solid ;
 }
 
+.All-Counter-Displays { 
+    display: none;
+ margin: 250px; 
+ border: solid black 5px; 
+background-color: #83677b; 
+padding-top: 2px; 
+font-family: 'Barlow', sans-serif; 
+border-radius: 30px; 
+border-width: 10px; 
+padding: 2px 5px 15px; 
+
+} 
 
 .Counter-Display { 
-    display: none; 
     text-align: center; 
-    color: black; 
-    font-size: 50px; 
+    color: black;
+    font-size: 50px;  
     
+  
 }   
-.Counter-Display-Rock { 
-    display: none;
+.Counter-Display-Rock {  
     text-align: center; 
     color: black; 
     font-size: 50px;
 }   
 .Counter-Display-Pop { 
-    display: none;
     text-align: center; 
     color: black; 
     font-size: 50px;
@@ -371,11 +384,12 @@ input {
     cursor: pointer;
     margin: 5px;
     cursor: pointer;
-    display: inline-block;
+    display: block;
     position: relative;
     transition: 0.5s;
     border-radius: 12px;
-    margin: 15px 0px;
+    margin: 15px 320px; 
+    font-family: 'Barlow', sans-serif;
 } 
 #try-again-rock { 
     background-color: white;
@@ -388,11 +402,12 @@ input {
     cursor: pointer;
     margin: 5px;
     cursor: pointer;
-    display: inline-block;
+    display: block;
     position: relative;
     transition: 0.5s;
     border-radius: 12px;
-    margin: 15px 0px;
+    margin: 15px 320px; 
+    font-family: 'Barlow', sans-serif;
 } 
 #try-again-pop { 
     background-color: white;
@@ -405,64 +420,13 @@ input {
     cursor: pointer;
     margin: 5px;
     cursor: pointer;
-    display: inline-block;
+    display: block;
     position: relative;
     transition: 0.5s;
     border-radius: 12px;
-    margin: 15px 0px;
+    margin: 15px 320px; 
+    font-family: 'Barlow', sans-serif;
 } 
-
-#rap-answers { 
-    background-color: white;
-    border: none;
-    color: black;
-    text-align: center;
-    padding: 4px;
-    width: 180px;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin: 5px;
-    cursor: pointer;
-    display: inline;
-    position: relative;
-    transition: 0.5s;
-    border-radius: 12px;
-    margin: 15px 0px;
-}
-#rock-answers { 
-    background-color: white;
-    border: none;
-    color: black;
-    text-align: center;
-    padding: 4px;
-    width: 180px;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin: 5px;
-    cursor: pointer;
-    display: inline;
-    position: relative;
-    transition: 0.5s;
-    border-radius: 12px;
-    margin: 15px 0px;
-}
-#pop-answers { 
-    background-color: white;
-    border: none;
-    color: black;
-    text-align: center;
-    padding: 4px;
-    width: 180px;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin: 5px;
-    cursor: pointer;
-    display: inline;
-    position: relative;
-    transition: 0.5s;
-    border-radius: 12px;
-    margin: 15px 0px;
-}
 
 #home-menu { 
     background-color: white;
@@ -475,11 +439,11 @@ input {
         cursor: pointer;
         margin: 5px;
         cursor: pointer;
-        display: inline;
+        display: block;
         position: relative;
         transition: 0.5s;
         border-radius: 12px;
-        margin: 15px 0px;
+        margin: 15px 310px;
 }
 #rock-home-menu { 
     background-color: white;
@@ -492,11 +456,11 @@ input {
         cursor: pointer;
         margin: 5px;
         cursor: pointer;
-        display: inline;
+        display: block;
         position: relative;
         transition: 0.5s;
         border-radius: 12px;
-        margin: 15px 0px;
+        margin: 15px 310px;
 }
 #pop-home-menu { 
     background-color: white;
@@ -509,11 +473,11 @@ input {
         cursor: pointer;
         margin: 5px;
         cursor: pointer;
-        display: inline;
+        display: block;
         position: relative;
         transition: 0.5s;
         border-radius: 12px;
-        margin: 15px 0px;
+        margin: 15px 310px;
 }
 
 
