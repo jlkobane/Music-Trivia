@@ -343,7 +343,6 @@ input {
 }
 
 .All-Counter-Displays { 
-    display: none;
  margin: 250px; 
  border: solid black 5px; 
 background-color: #83677b; 
@@ -406,7 +405,7 @@ padding: 2px 5px 15px;
     position: relative;
     transition: 0.5s;
     border-radius: 12px;
-    margin: 15px 320px; 
+    margin: 2px 320px; 
     font-family: 'Barlow', sans-serif;
 } 
 #try-again-pop { 
@@ -424,7 +423,7 @@ padding: 2px 5px 15px;
     position: relative;
     transition: 0.5s;
     border-radius: 12px;
-    margin: 15px 320px; 
+    margin: 2px 320px; 
     font-family: 'Barlow', sans-serif;
 } 
 
@@ -460,7 +459,7 @@ padding: 2px 5px 15px;
         position: relative;
         transition: 0.5s;
         border-radius: 12px;
-        margin: 15px 310px;
+        margin: 2px 310px;
 }
 #pop-home-menu { 
     background-color: white;
@@ -477,7 +476,7 @@ padding: 2px 5px 15px;
         position: relative;
         transition: 0.5s;
         border-radius: 12px;
-        margin: 15px 310px;
+        margin: 2px 310px;
 }
 
 

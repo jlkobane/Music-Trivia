@@ -1,7 +1,9 @@
 const homeScreenEl = document.querySelector('.Home-screen');
 
 const returnHomeButtonEl = document.querySelector('#home-menu');
+
 const rockReturnHomeButtonEl = document.querySelector('#rock-home-menu');
+
 const popReturnHomeButtonEl = document.querySelector('#pop-home-menu');
 
 const allButtonEl = document.querySelector('.All-Link');
@@ -171,6 +173,15 @@ let userRockAnswers = [];
 
 let userPopAnswers = [];
 
+allCounterDisplays.style.display = 'none' 
+// counterEl.style.display = 'none' 
+ 
+// rapRestartEl.style.display = 'none'
+// rockRestartEl.style.display = 'none'
+// popRestartEl.style.display = 'none' 
+// returnHomeButtonEl.style.display = 'none' 
+// rockReturnHomeButtonEl.style.display = 'none' 
+// popReturnHomeButtonEl.style.display = 'none' 
 gameSubjectsEl.style.display = 'none';
 gameRockSubjectsEl.style.display = 'none';
 gamePopSubjectsEl.style.display = 'none';
@@ -236,7 +247,8 @@ gamePopSelectorbuttonEl.addEventListener('click', function () {
 
 rapRestartEl.addEventListener('click', function () {
 	questionsEl.style.display = 'inline';
-	counterDisplay.style.display = 'none';
+	counterDisplay.style.display = 'none'; 
+	allCounterDisplays.style.display = 'none';
 	userAnswers = [];
 	scoreCounter = 0;
 	answerInput1El.value = '';
@@ -252,7 +264,7 @@ rapRestartEl.addEventListener('click', function () {
 });
 rockRestartEl.addEventListener('click', function () {
 	rockQuestionsEl.style.display = 'inline';
-	counterDisplayRock.style.display = 'none';
+	allCounterDisplays.style.display = 'none';
 	userRockAnswers = [];
 	rockScoreCounter = 0;
 	answerInput11El.value = '';
@@ -268,7 +280,7 @@ rockRestartEl.addEventListener('click', function () {
 });
 popRestartEl.addEventListener('click', function () {
 	popQuestionsEl.style.display = 'inline';
-	counterDisplayPop.style.display = 'none';
+	allCounterDisplays.style.display = 'none';
 	userPopAnswers = [];
 	popScoreCounter = 0;
 	answerInput21El.value = '';
@@ -285,18 +297,53 @@ popRestartEl.addEventListener('click', function () {
 
 returnHomeButtonEl.addEventListener('click', function () {
 	homeScreenEl.style.display = 'inline';
-	counterDisplay.style.display = 'none';
-	scoreCounter = 0;
+	counterDisplay.style.display = 'none'; 
+	allCounterDisplays.style.display = 'none';
+	scoreCounter = 0; 
+	userAnswers = [];
+	answerInput1El.value = '';
+	answerInput2El.value = '';
+	answerInput3El.value = '';
+	answerInput4El.value = '';
+	answerInput5El.value = '';
+	answerInput6El.value = '';
+	answerInput7El.value = '';
+	answerInput8El.value = '';
+	answerInput9El.value = '';
+	answerInput10El.value = '';
 });
 rockReturnHomeButtonEl.addEventListener('click', function () {
 	homeScreenEl.style.display = 'inline';
-	counterDisplayRock.style.display = 'none';
+	allCounterDisplays.style.display = 'none';
+	userRockAnswers = [];
 	rockScoreCounter = 0;
+	answerInput11El.value = '';
+	answerInput12El.value = '';
+	answerInput13El.value = '';
+	answerInput14El.value = '';
+	answerInput15El.value = '';
+	answerInput16El.value = '';
+	answerInput17El.value = '';
+	answerInput18El.value = '';
+	answerInput19El.value = '';
+	answerInput20El.value = '';
 });
 popReturnHomeButtonEl.addEventListener('click', function () {
 	homeScreenEl.style.display = 'inline';
-	counterDisplayPop.style.display = 'none';
+
+	allCounterDisplays.style.display = 'none';
+	userPopAnswers = [];
 	popScoreCounter = 0;
+	answerInput21El.value = '';
+	answerInput22El.value = '';
+	answerInput23El.value = '';
+	answerInput24El.value = '';
+	answerInput25El.value = '';
+	answerInput26El.value = '';
+	answerInput27El.value = '';
+	answerInput28El.value = '';
+	answerInput29El.value = '';
+	answerInput30El.value = '';
 });
 
 function userInput() {
@@ -359,8 +406,15 @@ function comparePopAnswer() {
 getResultsEl.addEventListener('click', function () {
 	compareAnswer();
 	questionsEl.style.display = 'none';
-	counterEl.style.display = 'inline';
+	counterEl.style.display = 'inline'; 
+	popCounterEl.style.display = 'none'
+	rockCounterEl.style.display = 'none'
 	counterDisplay.style.display = 'inline';
+	allCounterDisplays.style.display = 'block';
+	rockRestartEl.style.display = 'none'
+	popRestartEl.style.display = 'none' 
+	rockReturnHomeButtonEl.style.display = 'none'
+	popReturnHomeButtonEl.style.display = 'none'
 	let percentage = scoreCounter * 10;
 	counterEl.innerHTML = `Congrats! You got ${percentage}%. Would you like to`;
 });
@@ -368,17 +422,32 @@ getResultsEl.addEventListener('click', function () {
 getRockResultsEl.addEventListener('click', function () {
 	compareRockAnswer();
 	rockQuestionsEl.style.display = 'none';
+	counterEl.style.display = 'none';
+	popCounterEl.style.display = 'none';
 	rockCounterEl.style.display = 'inline';
-	counterDisplayRock.style.display = 'inline';
+	counterDisplay.style.display = 'none';
+	allCounterDisplays.style.display = 'block';
+	rockRestartEl.style.display = 'inline';
+	popRestartEl.style.display = 'none';
+	rockReturnHomeButtonEl.style.display = 'inline';
+	popReturnHomeButtonEl.style.display = 'none';
+	
 	let rockPercentage = rockScoreCounter * 10;
 	rockCounterEl.innerHTML = `Congrats! You got ${rockPercentage}%. Would you like to`;
 });
 
 getPopResultsEl.addEventListener('click', function () {
 	comparePopAnswer();
-	popQuestionsEl.style.display = 'none';
+	popQuestionsEl.style.display = 'none'; 
+	counterEl.style.display = 'none';
 	popCounterEl.style.display = 'inline';
-	counterDisplayPop.style.display = 'inline';
+	rockCounterEl.style.display = 'none';
+	counterDisplay.style.display = 'none';
+	allCounterDisplays.style.display = 'block';
+	rockRestartEl.style.display = 'none';
+	popRestartEl.style.display = 'inline';
+	rockReturnHomeButtonEl.style.display = 'none';
+	popReturnHomeButtonEl.style.display = 'inline';
 	let popPercentage = popScoreCounter * 10;
 	popCounterEl.innerHTML = `Congrats! You got ${popPercentage}%. Would you like to`;
 });
