@@ -1,6 +1,10 @@
 const homeScreenEl = document.querySelector('.Home-screen')
 
 const returnHomeButtonEl = document.querySelector('#home-menu')
+const rockReturnHomeButtonEl = document.querySelector('#rock-home-menu')
+const popReturnHomeButtonEl = document.querySelector('#pop-home-menu')
+
+const allButtonEl = document.querySelector('.All-Link') 
 
 const rapButtonEl = document.querySelector('.Rap-Link') 
 
@@ -97,17 +101,31 @@ const getPopResultsEl = document.querySelector('#Score-Result-Pop')
 
 const counterEl = document.querySelector('#Score-Counter') 
 
+const rockCounterEl = document.querySelector('#Score-Counter-Rock') 
+
+const popCounterEl = document.querySelector('#Score-Counter-Pop') 
+
 const counterDisplay = document.querySelector('.Counter-Display') 
 
-const hereButton1El = document.querySelector('.here-button1');
+const counterDisplayRock = document.querySelector('.Counter-Display-Rock') 
 
-const hereButton2El = document.querySelector('.here-button2');
+const counterDisplayPop = document.querySelector('.Counter-Display-Pop') 
 
-const hereButton3El = document.querySelector('.here-button2'); 
+const hereButton1El = document.querySelector('#here-button-rap');
+
+const hereButton2El = document.querySelector('#here-button-rock');
+
+const hereButton3El = document.querySelector('#here-button-pop'); 
 
 const rapRestartEl = document.querySelector('#try-again-rap')
 
+const rockRestartEl = document.querySelector('#try-again-rock')
+
+const popRestartEl = document.querySelector('#try-again-pop')
+
 let scoreCounter = 0 
+let rockScoreCounter = 0 
+let popScoreCounter = 0
 
 let emoRapAnswers = [
 	'2019',
@@ -163,6 +181,16 @@ questionsEl.style.display = 'none';
 rockQuestionsEl.style.display = 'none';
 popQuestionsEl.style.display = 'none';
 
+allButtonEl.addEventListener('click', function () { 
+    
+    homeScreenEl.style.display = 'none'; 
+    gameSubjectsEl.style.display = 'inline'; 
+    gameRockSubjectsEl.style.display = 'inline'; 
+    gamePopSubjectsEl.style.display = 'inline'; 
+    
+    
+}); 
+
 rapButtonEl.addEventListener('click', function () { 
     
     homeScreenEl.style.display = 'none'; 
@@ -195,8 +223,9 @@ hereButton1El.addEventListener('click', function () {
 
 hereButton2El.addEventListener('click', function () { 
     
-    homeScreenEl.style.display = 'none'; 
-    gameSubjectsEl.style.display = 'inline'; 
+    homeScreenEl.style.display = 
+	'none'; 
+    gameRockSubjectsEl.style.display = 'inline'; 
     
     
 }); 
@@ -204,7 +233,7 @@ hereButton2El.addEventListener('click', function () {
 hereButton3El.addEventListener('click', function () { 
     
     homeScreenEl.style.display = 'none'; 
-    gameSubjectsEl.style.display = 'inline'; 
+    gamePopSubjectsEl.style.display = 'inline'; 
     
     
 }); 
@@ -212,6 +241,8 @@ hereButton3El.addEventListener('click', function () {
 gameSelectorbuttonEl.addEventListener('click', function () { 
     
     gameSubjectsEl.style.display = 'none'; 
+    gameRockSubjectsEl.style.display = 'none'; 
+    gamePopSubjectsEl.style.display = 'none'; 
     questionsEl.style.display = 'inline'
     
     
@@ -219,13 +250,17 @@ gameSelectorbuttonEl.addEventListener('click', function () {
 
 gameRockSelectorbuttonEl.addEventListener('click', function () { 
     
+    gameSubjectsEl.style.display = 'none'; 
     gameRockSubjectsEl.style.display = 'none'; 
+    gamePopSubjectsEl.style.display = 'none'; 
     rockQuestionsEl.style.display = 'inline'
     
     
 }); 
 gamePopSelectorbuttonEl.addEventListener('click', function () { 
     
+    gameSubjectsEl.style.display = 'none'; 
+    gameRockSubjectsEl.style.display = 'none'; 
     gamePopSubjectsEl.style.display = 'none'; 
     popQuestionsEl.style.display = 'inline'
     
@@ -234,9 +269,77 @@ gamePopSelectorbuttonEl.addEventListener('click', function () {
 
 
 
-rapRestartEl.addEventListener('click', function () { 
+rapRestartEl.addEventListener('click', function () {  
     questionsEl.style.display = 'inline' 
+    counterDisplay.style.display = 'none' 
+	userAnswers = [] 
+    scoreCounter = 0  
+	answerInput1El.value = ''
+	answerInput2El.value = ''
+	answerInput3El.value = ''
+	answerInput4El.value = ''
+	answerInput5El.value = ''
+	answerInput6El.value = ''
+	answerInput7El.value = ''
+	answerInput8El.value = ''
+	answerInput9El.value = ''
+	answerInput10El.value = ''
+   
+}); 
+rockRestartEl.addEventListener('click', function () {  
+    rockQuestionsEl.style.display = 'inline' 
+    counterDisplayRock.style.display = 'none' 
+	userRockAnswers = [] 
+    rockScoreCounter = 0  
+	answerInput11El.value = ''
+	answerInput12El.value = ''
+	answerInput13El.value = ''
+	answerInput14El.value = ''
+	answerInput15El.value = ''
+	answerInput16El.value = ''
+	answerInput17El.value = ''
+	answerInput18El.value = ''
+	answerInput19El.value = ''
+	answerInput20El.value = ''
+   
+}); 
+popRestartEl.addEventListener('click', function () {  
+    popQuestionsEl.style.display = 'inline' 
+    counterDisplayPop.style.display = 'none'  
+	userPopAnswers = []
+    popScoreCounter = 0  
+	answerInput21El.value = ''
+	answerInput22El.value = ''
+	answerInput23El.value = ''
+	answerInput24El.value = ''
+	answerInput25El.value = ''
+	answerInput26El.value = ''
+	answerInput27El.value = ''
+	answerInput28El.value = ''
+	answerInput29El.value = ''
+	answerInput30El.value = ''
+   
+}); 
+
+returnHomeButtonEl.addEventListener('click', function () { 
+    homeScreenEl.style.display = 'inline' 
     counterDisplay.style.display = 'none'  
+	scoreCounter = 0
+    
+   
+});
+rockReturnHomeButtonEl.addEventListener('click', function () { 
+    homeScreenEl.style.display = 'inline' 
+    counterDisplayRock.style.display = 'none'  
+	rockScoreCounter = 0
+    
+   
+});
+popReturnHomeButtonEl.addEventListener('click', function () { 
+    homeScreenEl.style.display = 'inline' 
+    counterDisplayPop.style.display = 'none'  
+	popScoreCounter = 0
+
     
    
 });
@@ -288,7 +391,7 @@ function compareRockAnswer() {
 for (let i = 0; i < userRockAnswers.length; i++) {  
     
     if (rockAnswers[i] == userRockAnswers[i]){ 
-        scoreCounter += 1
+        rockScoreCounter += 1
     }
 } 
 
@@ -298,7 +401,7 @@ function comparePopAnswer() {
 for (let i = 0; i < userPopAnswers.length; i++) {  
     
     if (popAnswers[i] == userPopAnswers[i]){ 
-        scoreCounter += 1
+        popScoreCounter += 1
     }
 } 
 
@@ -313,7 +416,7 @@ getResultsEl.addEventListener('click', function () {
     counterEl.style.display = 'inline';
     counterDisplay.style.display = 'inline'
     let percentage = scoreCounter * 10 
-    counterEl.innerHTML = `You got ${percentage}%. Would you like to` 
+    counterEl.innerHTML = `Congrats! You got ${percentage}%. Would you like to` 
 
 }); 
 
@@ -321,10 +424,10 @@ getRockResultsEl.addEventListener('click', function () {
     
     compareRockAnswer();
     rockQuestionsEl.style.display = 'none'; 
-    counterEl.style.display = 'inline';
-    counterDisplay.style.display = 'inline'
-    let percentage = scoreCounter * 10 
-    counterEl.innerHTML = `You got ${percentage}%. Would you like to` 
+    rockCounterEl.style.display = 'inline';
+    counterDisplayRock.style.display = 'inline'
+    let rockPercentage = rockScoreCounter * 10 
+    rockCounterEl.innerHTML = `Congrats! You got ${rockPercentage}%. Would you like to` 
 
 }); 
 
@@ -332,9 +435,9 @@ getPopResultsEl.addEventListener('click', function () {
     
     comparePopAnswer();
 	popQuestionsEl.style.display = 'none'; 
-    counterEl.style.display = 'inline';
-    counterDisplay.style.display = 'inline'
-    let percentage = scoreCounter * 10 
-    counterEl.innerHTML = `You got ${percentage}%. Would you like to` 
+    popCounterEl.style.display = 'inline';
+    counterDisplayPop.style.display = 'inline'
+    let popPercentage = popScoreCounter * 10 
+    popCounterEl.innerHTML = `Congrats! You got ${popPercentage}%. Would you like to` 
 
 }); 

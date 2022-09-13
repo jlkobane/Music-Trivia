@@ -10,7 +10,8 @@ body {
 header{ 
     text-align: center; 
     background-color: #501b1d; 
-    border-radius: 70px;
+    border-top: solid black 5px;
+    border-bottom: solid black 5px;
     color: #ADADAD; 
     padding-bottom: 8px; 
     font-family: 'Barlow', sans-serif; 
@@ -30,14 +31,14 @@ h1 {
     text-align: center;
 }
 
-.here-button1, .here-button2, .here-button3 {
+#here-button-rap, #here-button-rock, #here-button-pop {
     padding: 0;
     border: none;
     background: none; 
     cursor: pointer;
     font-size: 22px; 
     margin-right: 0px; 
-    color: #bd52f7;
+    color: #ADADAD;
 }
 
 button { 
@@ -45,7 +46,7 @@ button {
     border: none;
     background: none; 
     cursor: pointer; 
-    margin-right: 30px; 
+    margin-right: 20px; 
     font-size: 18px; 
     color: #ADADAD; 
     
@@ -62,31 +63,41 @@ button:hover {
 }
 
 .title-screen { 
-    margin: 40px 250px; 
+    padding: 5px; 
+    margin: 30px 30px; 
     text-align: center; 
     font-size: 22px; 
     font-family: 'Barlow', sans-serif; 
-    line-height: 35px;
+    line-height: 35px; 
+    background-color: #83677b; 
+    border: solid black 3px; 
+    border-radius: 15px;
     
 
 } 
 
 .Rapper { 
-    margin: 3px 0px 20px 0px;
+    margin: 10px 0px 20px 0px;
     height: 350px; 
-    width: 600px;
+    width: 600px; 
+    border-radius: 20px; 
+    border: solid black 5px;
 } 
 
 .Rockstar {
     margin: 30px 0px 20px;
     height: 350px;
-    width: 600px;
+    width: 600px; 
+    border-radius: 20px; 
+    border: solid black 5px;
 }
 
 .Pop { 
     margin: 30px 0px 20px;
     height: 350px;
-    width: 600px;
+    width: 600px; 
+    border-radius: 20px; 
+    border: solid black 5px;
     
 }
 
@@ -98,7 +109,7 @@ button:hover {
     text-align: center;
     font-size: 22px;
     font-family: 'Barlow', sans-serif; 
-    margin-bottom: 500px;
+    margin-bottom: 500px; 
 } 
 
 .Game-subjects-rock { 
@@ -119,31 +130,49 @@ button:hover {
     
     margin: 30px 0px 20px;
         height: 200px;  
-      display: inline-block;
+        width: 250px;
+      display: inline-block; 
+      border-radius: 15px; 
+    border: solid black 5px;
 }
 
 .rock-out { 
     
     margin: 30px 0px 20px;
         height: 200px; 
-        width: 250px;
-      display: inline-block;
+        width: 250px; 
+        border-radius: 15px;
+      display: inline-block; 
+    border: solid black 5px;
 }
 .kingofpop { 
     
     margin: 30px 0px 20px;
         height: 200px; 
-        width: 250px;
-      display: inline-block;
+        width: 250px; 
+        border-radius: 15px;
+      display: inline-block; 
+    border: solid black 5px;
 }
 
 .Picture-Styling { 
     display: flex; 
     align-items: center; 
     justify-content: center; 
+    margin: 20px 20px;
+    border: solid black 5px; 
+    border-radius: 15px; 
+    background-color: #83677b; 
+    
+    
     
     
 } 
+
+.Game-selector-styling { 
+    padding-left: 15px; 
+    width: 300px;
+}
 
 
 
@@ -156,7 +185,7 @@ button:hover {
     cursor: pointer;
     font-size: 22px;
     margin-right: 0px;
-    color: #bd52f7;
+    color: #ADADAD;
 } 
 
 .Game-selectors-rock { 
@@ -168,7 +197,7 @@ button:hover {
     cursor: pointer;
     font-size: 22px;
     margin-right: 0px;
-    color: #bd52f7;
+    color: #ADADAD;
 } 
 
 .Game-selectors-pop { 
@@ -180,54 +209,58 @@ button:hover {
     cursor: pointer;
     font-size: 22px;
     margin-right: 0px;
-    color: #bd52f7;
+    color: #ADADAD;
 } 
 
 .Selector-Title-Rap { 
     text-align: center;
     background-color: #501b1d; 
-    border-radius: 70px;
     color: #ADADAD;
     padding-bottom: 8px;
     font-family: 'Barlow', sans-serif;
     letter-spacing: 2px; 
     font-size: 40px;
     padding-bottom: 10px;
-    padding-top: 10px;
+    padding-top: 10px; 
+    border-top: solid black 5px;
+    border-bottom: solid black 5px;
 
 } 
 .Selector-Title-Rock { 
     text-align: center;
     background-color: #501b1d; 
-    border-radius: 70px;
     color: #ADADAD;
     padding-bottom: 8px;
     font-family: 'Barlow', sans-serif;
     letter-spacing: 2px; 
     font-size: 40px;
     padding-bottom: 10px;
-    padding-top: 10px;
+    padding-top: 10px; 
+    border-top: solid black 5px;
+    border-bottom: solid black 5px;
 
 } 
 .Selector-Title-Pop { 
     text-align: center;
     background-color: #501b1d; 
-    border-radius: 70px;
     color: #ADADAD;
     padding-bottom: 8px;
     font-family: 'Barlow', sans-serif;
     letter-spacing: 2px; 
     font-size: 40px;
     padding-bottom: 10px;
-    padding-top: 10px;
+    padding-top: 10px; 
+    border-top: solid black 5px;
+    border-bottom: solid black 5px;
 
 } 
 
 
 h3 { 
-border-bottom: 3px solid black; 
-padding-top: 12px;
-width: 100%;
+    padding-top: 12px;
+    background-color: #83677b; 
+    border: solid black 5px;
+    margin: 20px 50px 20px; 
 
 }  
 
@@ -235,7 +268,21 @@ width: 100%;
     text-align: center; 
     line-height: 30px; 
     font-size: 22px; 
-    font-family: 'Barlow', sans-serif;
+    font-family: 'Barlow', sans-serif; 
+    
+}
+.Rock-Questions { 
+    text-align: center; 
+    line-height: 30px; 
+    font-size: 22px; 
+    font-family: 'Barlow', sans-serif; 
+    
+}
+.Pop-Questions { 
+    text-align: center; 
+    line-height: 30px; 
+    font-size: 22px; 
+    font-family: 'Barlow', sans-serif; 
     
 }
 
@@ -245,12 +292,13 @@ width: 100%;
     padding-top: 12px; 
     text-align: center;
     background-color: #501b1d; 
-    border-radius: 70px;
     color: #ADADAD;
     padding-bottom: 12px;
     font-family: 'Barlow', sans-serif;
     letter-spacing: 2px; 
-    width: 100%;
+    width: 100%; 
+    border-top: solid black 5px;
+    border-bottom: solid black 5px;
 } 
 
 .rock { 
@@ -259,7 +307,8 @@ width: 100%;
     padding-top: 12px; 
     text-align: center;
     background-color: #501b1d; 
-    border-radius: 70px;
+    border-top: solid black 5px;
+    border-bottom: solid black 5px;
     color: #ADADAD;
     padding-bottom: 12px;
     font-family: 'Barlow', sans-serif;
@@ -273,7 +322,8 @@ width: 100%;
     padding-top: 12px; 
     text-align: center;
     background-color: #501b1d; 
-    border-radius: 70px;
+    border-top: solid black 5px;
+    border-bottom: solid black 5px;
     color: #ADADAD;
     padding-bottom: 12px;
     font-family: 'Barlow', sans-serif;
@@ -283,19 +333,68 @@ width: 100%;
 
 input { 
     margin-bottom: 12px; 
-    height: 15px; 
-    width: 200px;
+    height: 18px; 
+    width: 210px; 
+    border-radius: 12px; 
+    border: solid ;
 }
 
 
 .Counter-Display { 
-     display: none;
+    display: none; 
+    text-align: center; 
+    color: black; 
+    font-size: 50px; 
+    
+}   
+.Counter-Display-Rock { 
+    display: none;
+    text-align: center; 
+    color: black; 
+    font-size: 50px;
+}   
+.Counter-Display-Pop { 
+    display: none;
     text-align: center; 
     color: black; 
     font-size: 50px;
 }   
 
 #try-again-rap { 
+    background-color: white;
+    border: none;
+    color: black;
+    text-align: center;
+    padding: 4px;
+    width: 100px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    border-radius: 12px;
+    margin: 15px 0px;
+} 
+#try-again-rock { 
+    background-color: white;
+    border: none;
+    color: black;
+    text-align: center;
+    padding: 4px;
+    width: 100px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    border-radius: 12px;
+    margin: 15px 0px;
+} 
+#try-again-pop { 
     background-color: white;
     border: none;
     color: black;
@@ -330,8 +429,76 @@ input {
     border-radius: 12px;
     margin: 15px 0px;
 }
+#rock-answers { 
+    background-color: white;
+    border: none;
+    color: black;
+    text-align: center;
+    padding: 4px;
+    width: 180px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    cursor: pointer;
+    display: inline;
+    position: relative;
+    transition: 0.5s;
+    border-radius: 12px;
+    margin: 15px 0px;
+}
+#pop-answers { 
+    background-color: white;
+    border: none;
+    color: black;
+    text-align: center;
+    padding: 4px;
+    width: 180px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    cursor: pointer;
+    display: inline;
+    position: relative;
+    transition: 0.5s;
+    border-radius: 12px;
+    margin: 15px 0px;
+}
 
 #home-menu { 
+    background-color: white;
+        border: none;
+        color: black;
+        text-align: center;
+        padding: 4px;
+        width: 125px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+        cursor: pointer;
+        display: inline;
+        position: relative;
+        transition: 0.5s;
+        border-radius: 12px;
+        margin: 15px 0px;
+}
+#rock-home-menu { 
+    background-color: white;
+        border: none;
+        color: black;
+        text-align: center;
+        padding: 4px;
+        width: 125px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+        cursor: pointer;
+        display: inline;
+        position: relative;
+        transition: 0.5s;
+        border-radius: 12px;
+        margin: 15px 0px;
+}
+#pop-home-menu { 
     background-color: white;
         border: none;
         color: black;

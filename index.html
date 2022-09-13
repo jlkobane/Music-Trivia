@@ -15,6 +15,7 @@
 			<header>
 				<h1>Music Trivia</h1>
 				<nav>
+					<button class="All-Link">All</button>
 					<button class="Rap-Link">Rap</button>
 					<button class="Rock-Link">Rock</button>
 					<button class="Pop-Link">Pop</button>
@@ -32,30 +33,39 @@
 				<img class="Rapper" src="rap.jpg" alt="Rapper Performing" />
 				<p>
 					Love Hip-Hop? Want to see how much you know about the worlds top
-					genre? Click <button class="here-button1">here</button> to view some
+					genre? Click <button id="here-button-rap">here</button> to view some
 					of our rap trivia games.
 				</p>
 				<img class="Rockstar" src="rock.jpg" alt="Rockstar Playing Guitar" />
 				<p>
 					Motley Crue. Guns n Roses. Nirvana. All the legendary bands
-					are right <button class="here-button2">here.</button>
+					are right <button id="here-button-rock">here.</button>
 				</p> 
 				<img class="Pop" src="pop.jpg" alt="Pop Concert" /> 
-				<p>Think you are the biggest Justin Bieber fan or Taylor Swift fan? Why don't you click <button class="here-button3">here</button> and prove it.</p>
+				<p>Think you are the biggest Justin Bieber fan or Taylor Swift fan? Why don't you click <button id="here-button-pop">here</button> and prove it.</p>
 			</section>
 		</div>
 		<div class="Counter-Display">
 			<h2 id="Score-Counter">0</h2>
 			<button id="try-again-rap">Try Again</button>
-			<button id="rap-answers">View Your Answers</button> 
 			<button id="home-menu">Return Home</button>
+		</div>
+		<div class="Counter-Display-Rock">
+			<h2 id="Score-Counter-Rock">0</h2>
+			<button id="try-again-rock">Try Again</button>
+			<button id="rock-home-menu">Return Home</button>
+		</div>
+		<div class="Counter-Display-Pop">
+			<h2 id="Score-Counter-Pop">0</h2>
+			<button id="try-again-pop">Try Again</button>
+			<button id="pop-home-menu">Return Home</button>
 		</div>
 		<div class="Game-subjects-rap">
 			<section>
-				<h1 class="Selector-Title-Rap">All Rap Trivia</h1> 
+				<h1 class="Selector-Title-Rap">All Rap Trivia</h1>  
 				<div class="Picture-Styling">
 					<img class="juice" src="juice.jpg" alt="Juice Wrld Performing" />
-					<p>A <button class="Game-selectors">quiz</button> about one of the most popular genres to date.</p>  
+					<p class="Game-selector-styling">A <button class="Game-selectors">quiz</button> about one of the most popular genres to date.</p>  
 				</div> 
 				</section>
 		</div> 
@@ -64,7 +74,7 @@
 				<h1 class="Selector-Title-Rock">All Rock Trivia</h1> 
 				<div class="Picture-Styling">
 					<img class="rock-out" src="rocknroll2.jpg" alt="Statue of hand doing rock and roll symbol" />
-					<p>A <button class="Game-selectors-rock">quiz</button> about some of the 80s rock legends.</p>  
+					<p class="Game-selector-styling">A <button class="Game-selectors-rock">quiz</button> about some of the 80s rock legends.</p>  
 				</div> 
 				</section> 
 				</div>
@@ -73,7 +83,7 @@
 				<h1 class="Selector-Title-Pop">All Pop Trivia</h1> 
 				<div class="Picture-Styling">
 					<img class="kingofpop" src="michael.jpg" alt="Michael Jackson on a billboard" />
-					<p>A <button class="Game-selectors-pop">quiz</button> about the king of pop himself. Michael Jackson!</p>  
+					<p class="Game-selector-styling">A <button class="Game-selectors-pop">quiz</button> about the king of pop himself. Michael Jackson!</p>  
 				</div> 
 				</section>
 		</div> 
